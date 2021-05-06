@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+div{
+    width:80%;
+   
+}
+
+table{
+    width: 100%;
+    border:1px solid blue;
+}
+table,tr,td{
+    font-family:  Arial, sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+   
+   
+}
+
+tr:hover{
+    background-color: rgba(61, 31, 14, 0.719);
+}
+
+
+.lblack{
+    
+    background-color: rgba(238, 241, 191, 0.719);
+}
+.dblack{
+  
+    background-color: rgba(12, 11, 12, 0.192);
+}
+
+.rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 2px;
+  width: 200px;
+ 
+}
+
+
+</style>
+
+
+
+
+<body>
+    <h1 style="text-align: center;">TABLE</h1>
+<center>
+    <div>
+        <table >
+       
+                <tr style="font-weight: bold;" >    <td>S#</td>   <td>Name</td>     <td>Class</td>   <td>Roll</td>    </tr>
+           
+            <tr class="lblack">  <td>1</td>   <td>Mohan</td>     <td>BCA</td>   <td>1001</td>    </tr>
+            <tr  class="dblack">  <td>2</td>   <td>Sohan</td>     <td>MCA</td>   <td>1002</td>    </tr>
+            <tr  class="lblack">  <td>3</td>   <td>Rohan</td>     <td>BTECH</td>   <td>1003</td>    </tr>
+            <tr  class="dblack">  <td>4</td>   <td>Pohan</td>     <td>MTECH</td>   <td>1004</td>    </tr>
+            <tr  class="lblack">  <td>5</td>   <td>Sam</td>     <td>ISC</td>   <td>1005</td>    </tr>
+            <tr  class="dblack">  <td>6</td>   <td>RAM</td>     <td>BSC</td>   <td>1006</td>    </tr>
+        
+        </table>
+    </div>
+</center>
+
+<input class="rcorners2" type="text" id="nm"/>  
+
+</body>
+
+<script>
+urlParams = new URLSearchParams(window.location.search);
+nameval = urlParams.get('name');
+lnameval = urlParams.get('class');
+
+document.getElementById("nm").value=nameval +" "+lnameval;
+
+
+
+
+
+
+</script>
+
+</html>

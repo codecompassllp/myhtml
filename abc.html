@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="./jquery.3.6.0.min.js"></script>
+<body>
+
+    <input type="text" id="name" name="name">
+
+    <div id="div1">
+        <h1 id="h11">This is Div</h1>
+
+
+    </div>
+    <button onclick="showtext()">clickme</button>
+    <button onclick="showdiv()">divdata</button>
+</body>
+
+<script>
+
+    function showdiv()
+    {
+        y=$("#h11").val();
+        alert(y);
+    }
+
+function showtext()
+{
+    x=document.getElementById("name").value
+    alert(x);
+}
+
+</script>
+</html>

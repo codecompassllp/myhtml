@@ -1,0 +1,48 @@
+<html>
+<script src='./jquery.3.6.0.min.js'></script>
+<body>
+
+<input type='text' id='name' />
+<input type='text' id='std' />
+<input type='text' id='roll' />
+<input type="button" value="Save" onclick="saveData()"/>
+<input type="button" value="Show" onclick="show()"/>
+
+
+</body>
+
+<script>
+
+var student=[{
+    name:'Belal',
+    std:'BTech',
+    roll:'1'
+}];
+var i=0;
+function saveData()
+{
+
+    console.log("Index : " + i);
+    name=$('#name').val()
+    std=$('#std').val()
+    roll=$('#roll').val()
+
+    record={};
+    record.name=name;
+    record.std=std;
+    record.roll=roll;
+    
+    student.push(record);
+    console.log("Total Student : " + student.length);
+
+}
+function show()
+{
+    student.forEach((a)=>{
+        console.log(a.name + ":" +a.std +":"+ a.roll);
+    })
+}
+
+</script>
+
+</html>

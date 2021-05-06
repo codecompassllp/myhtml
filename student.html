@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery.3.6.0.min.js"></script>
+    <script src="./student.js"></script>
+    <title>Student</title>
+
+    <style>
+
+        body
+        {
+            background-image:url('https://images.pexels.com/photos/132197/pexels-photo-132197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+        }
+
+        div
+        {
+            width:75%;
+        }
+
+        table
+        {
+            width:100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        tr,td
+        {
+            border: 1px solid black;
+            text-align: center; 
+             
+        }
+
+        tr:nth-child(even)
+        {
+            background-color:rgb(209, 205, 205);
+        }
+         
+        
+        tr:hover
+        {
+            background-color: rgb(48, 107, 184);
+            
+        }
+    </style>
+
+</head>
+<body>
+ 
+    <h1 style="text-align: center;">Student Form</h1>
+    <hr>
+
+    
+        <label for="name">Student Name :-</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="class">Class :-</label><br>
+        <input type="text" id="std" name="std"><br>
+        <label for="roll">Roll No. :-</label><br>
+        <input type="text" id="roll" name="roll"><br><br>
+        <input type="button" value="Save" onclick="getdata()">
+   
+    <br><hr>
+
+    <center>
+        <div>
+            <h2 style="text-align: center;border: 1px solid black;padding: 10px;background-color: cadetblue;">Student Record Table</h2>
+        </div>
+    </center>
+    
+    
+    <center>
+        <div>
+            <table id="sturecord" class="mytable" onclick="getTableData1()">
+                <tr id='1' onclick="getTableData(this)">  <th>S No.</th>  <th>Student Name</th>  <th>Roll No.</th>  <th>Class</th>  </tr>
+                <tr id='2' onclick="getTableData(this)"> <td>1</td>  <td>Mohan</td>   <td>101</td>  <td>10<sup>th</sup></td>    </tr>
+                <tr id='3' onclick="getTableData(this)"> <td>2</td>  <td>Sohan</td>   <td>102</td>  <td>12<sup>th</sup></td>    </tr>
+                <tr id='4' onclick="getTableData(this)"> <td>3</td>  <td>Rohan</td>   <td>103</td>  <td>8<sup>th</sup></td>     </tr>
+                <tr id='5' onclick="getTableData(this)"> <td>4</td>  <td>Ramesh</td>   <td>104</td>  <td>9<sup>th</sup></td>    </tr>
+                <tr id='6' onclick="getTableData(this)"> <td>5</td>  <td>Suresh</td>   <td>105</td>  <td>11<sup>th</sup></td>   </tr>
+                
+            </table>
+        </div>
+    </center>
+
+    <br>
+
+    <button onclick="alert('!##!')">Clear Table</button>
+
+</body>
+
+<script>
+function getTableData1()
+{
+
+}
+function getTableData(e)
+{
+    $(e).children('td').each( function(td_idx, td) {
+        if(td_idx === 2)
+        console.log( td_idx +'=> ' + $(td).text());
+    }); 
+    /*
+    var data;
+    $('#sturecord').each(function (a,b){
+        console.log(a);
+       // console.log(b);
+         data=b;
+        x=data.getElementsByTagName("tr")
+        console.log(x);
+
+
+    })*/
+}
+
+</script>
+
+</html>

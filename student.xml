@@ -1,0 +1,22 @@
+<Students>
+    <Student>
+        <Name> Mohan</Name>
+        <Std> BCA </Std>
+        <Roll> 5 </Roll>
+        <Add>   
+            <HNo> </Hno>
+            <City> </City>
+            <State> </State>
+            <Pin> </Pin>
+        </Add>
+    </Student>
+
+    <Student>
+        <Name> Rohan</Name>
+        <Std> MCA </Std>
+        <Roll> 6 </Roll>
+    </Student>
+</Students>
+
+
+
